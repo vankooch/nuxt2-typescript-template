@@ -21,7 +21,6 @@ module.exports = function() {
     // Add TypeScript loader for vue files
     for (let rule of config.module.rules) {
       if (rule.loader === "vue-loader") {
-        // console.log(rule);
         rule.options.loaders = {
           ts: "tsLoader",
         };
