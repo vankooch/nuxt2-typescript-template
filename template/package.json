@@ -5,7 +5,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "bootstrap": "^4.1.2",
-    "nuxt": "https://github.com/nuxt/nuxt.js.git",
+    "nuxt-edge": "^2.0.0-25523369.7c85202",
     "nuxt-property-decorator": "^1.2.0",
     "nuxt-typescript": "^0.11.0",
     "vue":"^2.5.16",
