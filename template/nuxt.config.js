@@ -1,3 +1,5 @@
+const webpack = require("webpack");
+
 module.exports = {
   env: {
     baseUrl: "http://localhost:3000"
@@ -132,14 +134,19 @@ module.exports = {
     "~/modules/typescript.js"
   ],
 
+  plugins: ["~/plugins/bootstrap.js"],
+
   build: {
-    extend(config) {
-      for (rule of config.module.rules) {
-        if ("loader" in rule && rule.loader === "vue-loader") {
-          console.log(rule);
-        }
-      }
-    }
+    vendor: ["jquery", "bootstrap"],
+    plugins: [
+      // set shortcuts as global for bootstrap
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery"
+      })
+    ],
+    extend(config) {}
   },
 
   // Generate static version

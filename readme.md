@@ -13,8 +13,9 @@ It comes with
 * Typescript
 * SCSS
 * Webpack 4
-* Bootstrap 4
+* Bootstrap 4 (Vanilla)
 
+I've included vanilla Bootstrap 4 without direct binding to Vue. As vanilla bootstrap needs jQuery and popper.js those two libarary are also included. Of course you can switch to a Bootstrap 4 version with Vue mapping like [Bootstrap-Vue](https://bootstrap-vue.js.org/)
 
 # Installation 
 

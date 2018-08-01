@@ -1,3 +1,16 @@
+var completeMessage = "To get started:\n\n"
+completeMessage += "{{#inPlace}}"
+completeMessage += "cd {{destDirName}}\n"
+completeMessage += "{{/inPlace}}"
+completeMessage += "yarn install \n"
+completeMessage += "# Development server \n"
+completeMessage += "yarn dev \n"
+completeMessage += "# Generate \n"
+completeMessage += "yarn generate \n"
+completeMessage += "# Build \n"
+completeMessage += "yarn build \n"
+completeMessage += "yarn start \n"
+
 module.exports = {
     helpers: {
       raw: function(options) {
@@ -21,6 +34,5 @@ module.exports = {
         message: "Author"
       }
     },
-    completeMessage:
-      "{{#inPlace}}To get started:\n\n  npm install # Or yarn\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install # Or yarn\n  npm run dev{{/inPlace}}"
+    completeMessage: completeMessage,
   }
