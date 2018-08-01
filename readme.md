@@ -13,6 +13,7 @@ It comes with
 * Typescript
 * SCSS
 * Webpack 4
+* Bootstrap 4
 
 
 # Installation 
