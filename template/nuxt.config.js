@@ -1,10 +1,14 @@
 const webpack = require("webpack");
 
 module.exports = {
+  mode: "universal",
   env: {
     baseUrl: "http://localhost:3000"
   },
 
+  /*
+   ** Headers of the page
+   */
   head: {
     titleTemplate: "%s",
     meta: [
@@ -123,18 +127,37 @@ module.exports = {
     ]
   },
 
+  /*
+   ** Customize the progress-bar color
+   */
+  loading: { color: "#fff" },
+
+  /*
+   ** Global CSS
+   */
   css: [
     // SCSS file in the project
     "~/assets/styles/main.scss"
   ],
 
+  /*
+   ** Plugins to load before mounting the App
+   */
+  plugins: ["~/plugins/bootstrap.js"],
+
+  /*
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [],
+
+  /*
+   ** Nuxt.js modules
+   */
   modules: [
     // Using package name
     "@nuxtjs/axios",
     "~/modules/typescript.js"
   ],
-
-  plugins: ["~/plugins/bootstrap.js"],
 
   build: {
     vendor: ["jquery", "bootstrap"],
