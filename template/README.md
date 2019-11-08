@@ -15,6 +15,9 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
+# auto hot reload
+$ yarn watch
+
 # generate static project
 $ yarn generate
 ```
